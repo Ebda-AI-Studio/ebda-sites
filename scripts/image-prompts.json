@@ -1,0 +1,15 @@
+{
+  "note": "Provenance of the generated photographs in assets/img (text-to-image, 30 steps). Each ships as -640 and full-width webp. Captioned 'illustrative' on the page.",
+  "common_suffix": "editorial photograph, natural light, 35mm, no people, no text, no logos",
+  "images": {
+    "design-hero": { "size": "832x1040", "prompt": "Editorial photograph, a calm Cairo apartment living room at golden hour, warm oak carpentry, brass details, linen sofa, arched window with geometric screen shadows on an ivory wall, no people, architectural digest style, natural light, 35mm" },
+    "design-kitchen": { "size": "1216x832", "prompt": "A custom-built kitchen in a Cairo apartment, walnut lower cabinets and ivory upper cabinets, slim brass handles, honed stone counter, morning light from a side window, precise joinery + common_suffix" },
+    "design-workshop": { "size": "1216x832", "prompt": "A carpentry workshop bench with freshly cut oak panels stacked neatly, pencil marks and a steel tape measure, a hand plane and chisels, warm afternoon light and sawdust in the air + common_suffix" },
+    "marketing-hero": { "size": "832x1040", "prompt": "A small product photography studio set, a camera on a tripod facing a styled table with handmade ceramic cups and a brass tray on a warm sand-coloured seamless backdrop, large softbox light, behind the scenes view + common_suffix" },
+    "marketing-podcast": { "size": "1216x832", "prompt": "A quiet podcast recording corner, two broadcast microphones on arms over a wooden desk, closed-back headphones, acoustic felt panels in warm beige, a small brass desk lamp glowing + common_suffix" },
+    "marketing-print": { "size": "1216x832", "prompt": "Overhead view of printed design proofs on a pale stone table: posters and folded flyers made only of abstract gold, brass and ivory geometric shapes, completely wordless, no lettering, no typography, paper colour swatches and a brass ruler, soft window light with long shadows, editorial photograph, no people" },
+    "events-hero": { "size": "832x1040", "prompt": "A modern exhibition and product launch hall just before the doors open, a low stage with a plain lectern, minimal display plinths with warm gold spotlights, rows of chairs, high ceiling with soft hanging lights, calm and expectant, editorial photograph, natural and warm light, 35mm, no people, no text, no logos, no lettering" },
+    "events-hall": { "size": "1216x832", "prompt": "An empty exhibition hall the evening before opening, clean modular stands with ivory walls and warm wood, display plinths under gold spotlights, a wide central aisle, high ceiling, editorial photograph, absolutely no people, no text, no logos, no lettering, no screens" },
+    "events-badges": { "size": "1216x832", "prompt": "Close-up of a registration table in an empty venue before a corporate event, neat rows of completely blank white name badges on gold lanyards, a low vase of white flowers, linen tablecloth, empty room softly blurred behind, warm light, editorial photograph, absolutely no people, no screens, no text, no lettering" }
+  }
+}
