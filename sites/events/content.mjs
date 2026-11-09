@@ -1,3 +1,4 @@
+// SERVICE SLOT: replace `items` in ar and en with `groups: [[title, [[item, description], ...]], ...]` once Ahmad supplies the list (same shape as sites/marketing). The renderer already supports both.
 // DRAFT: Ahmad gave no item list for Events. This copy is a short honest placeholder (no claims, clients or prices).
 export default {
   id: 'events',

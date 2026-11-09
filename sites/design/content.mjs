@@ -1,3 +1,4 @@
+// SERVICE SLOT: to add sections, replace `items` in ar and en with `groups: [[title, [[item, description], ...]], ...]` (same shape as sites/marketing). The renderer already supports both.
 export default {
   id: 'design',
   name: 'Ebda Design',

@@ -43,3 +43,8 @@ footer{border-top:1px solid var(--line);padding:1.5rem 0 2.5rem;display:flex;jus
 footer p{margin:0;font-size:.9rem}
 @media (max-width:480px){.bar{flex-wrap:wrap}section{padding:2rem 0}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.bar nav a:not(.btn),.brand,.note a{display:inline-flex;align-items:center;min-height:44px}
+.note a{min-height:0;display:inline}
+.hero{position:relative;background:radial-gradient(60rem 18rem at 85% 0,rgba(176,141,87,.16),transparent 70%)}
+body[data-accent=silver] .hero{background:radial-gradient(60rem 18rem at 15% 0,rgba(195,198,202,.14),transparent 70%)}
+body[data-accent=brass] .hero{background:radial-gradient(60rem 18rem at 50% 0,rgba(194,160,106,.18),transparent 70%)}
