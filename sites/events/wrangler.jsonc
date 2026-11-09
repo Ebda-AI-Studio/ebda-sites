@@ -1,8 +1,11 @@
 {
-  // Hidden preview: workers.dev only. No routes, no custom domain, never linked from anywhere.
+  // Hidden preview. Basic Auth via lib/worker.mjs (secret PREVIEW_PASSWORD). One specific route on the
+  // zone for this preview host only; the zone's wildcard route is not touched. Never linked from anywhere.
   "name": "ebda-events-preview",
+  "main": "../../lib/worker.mjs",
   "compatibility_date": "2026-11-01",
   "workers_dev": true,
   "preview_urls": false,
-  "assets": { "directory": "../../dist/events", "not_found_handling": "none" }
+  "routes": [{ "pattern": "preview-events.ebda.app/*", "zone_name": "ebda.app" }],
+  "assets": { "directory": "../../dist/events", "binding": "ASSETS", "run_worker_first": true, "not_found_handling": "none" }
 }

@@ -34,10 +34,25 @@ test('events is flagged as a draft, others are not', () => {
   assert.doesNotMatch(readFileSync('dist/marketing/index.html', 'utf8'), /class="draft"/);
   assert.ok(existsSync('dist/design/index.html'));
 });
-test('no site is wired to a route or custom domain', () => {
+test('each site has only its own preview-host route, gated by the worker', () => {
   for (const id of ids) {
     const w = readFileSync(`sites/${id}/wrangler.jsonc`, 'utf8');
-    assert.doesNotMatch(w, /"routes?"|custom_domain|ebda\.app/);
+    assert.doesNotMatch(w, /custom_domain/);
+    assert.deepEqual([...w.matchAll(/"pattern": "([^"]+)"/g)].map(m => m[1]), [`preview-${id}.ebda.app/*`]);
+    assert.match(w, /"run_worker_first": true/);
     assert.match(w, /"workers_dev": true/);
   }
+});
+
+test('worker fails closed without the secret and gates every request', async () => {
+  const { default: w } = await import('../lib/worker.mjs');
+  const env = { ASSETS: { fetch: async () => new Response('ok') } };
+  const r = await w.fetch(new Request('https://x/'), env);
+  assert.equal(r.status, 401);
+  assert.equal(r.headers.get('x-robots-tag'), 'noindex, nofollow');
+  assert.equal(await r.text(), 'Unauthorized');
+  const auth = p => ({ headers: { Authorization: 'Basic ' + btoa('ebda:' + p) } });
+  assert.equal((await w.fetch(new Request('https://x/', auth('pw')), { ...env, PREVIEW_PASSWORD: 'pw' })).status, 200);
+  assert.equal((await w.fetch(new Request('https://x/', auth('no')), { ...env, PREVIEW_PASSWORD: 'pw' })).status, 401);
+  assert.equal((await w.fetch(new Request('https://x/', auth('')), env)).status, 401);
 });
