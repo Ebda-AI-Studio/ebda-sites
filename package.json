@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "typecheck": "node --check scripts/build.mjs && node --check lib/render.mjs && node --check lib/contact.js",
-    "test": "node scripts/build.mjs && node --test test/",
+    "test": "node scripts/build.mjs && node --test test/*.test.mjs",
     "deploy": "node scripts/build.mjs && for s in events marketing design; do (cd sites/$s && wrangler deploy) || exit 1; done"
   },
   "engines": { "node": ">=20" }
