@@ -1,0 +1,14 @@
+{
+  "name": "ebda-sites",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Hidden preview landing sites for Ebda AI Studio sub-brands (events, marketing, design).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "node --check scripts/build.mjs && node --check lib/render.mjs && node --check lib/contact.js",
+    "test": "node scripts/build.mjs && node --test test/",
+    "deploy": "node scripts/build.mjs && for s in events marketing design; do (cd sites/$s && wrangler deploy) || exit 1; done"
+  },
+  "engines": { "node": ">=20" }
+}

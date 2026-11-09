@@ -1,0 +1,8 @@
+{
+  // Hidden preview: workers.dev only. No routes, no custom domain, never linked from anywhere.
+  "name": "ebda-marketing-preview",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": { "directory": "../../dist/marketing", "not_found_handling": "none" }
+}
