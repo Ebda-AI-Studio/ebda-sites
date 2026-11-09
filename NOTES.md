@@ -24,3 +24,13 @@ Review list for Ahmad. Nothing here is shown on the sites; the pages carry no dr
 ## Imagery
 
 All photographs are generated (no people, no text, no logos) and captioned on the page as illustrative. Prompts: `scripts/image-prompts.json`. Replace with real project photos once they exist.
+
+## Design critique (impeccable, 2026-11-09): applied and open
+
+Applied: per-brand path module on each home (marketing ad to sale, design photo to home, events before to after); stronger
+silver for Marketing; inert service chips turned into plain text; contact form now includes the chosen service and shows a
+"message ready, press send" status; shorter Events lead and English hero size; 44px targets on home service links and footer.
+
+- Ruling SUBBRANDS-V2-1 - No phone/WhatsApp contact link on the sites. No studio WhatsApp number exists in BRAND, and inventing one is not allowed. Cost if wrong: Egyptian visitors who prefer WhatsApp must use email until Ahmad supplies a number (one-line add in lib/render.mjs).
+- Ruling SUBBRANDS-V2-2 - No "we reply the same day" promise, no portfolio/credentials block. Neither is confirmed; claims stay uninventable. Cost if wrong: weaker trust for corporate buyers until real proof exists.
+- Ruling SUBBRANDS-V2-3 - Detector "cramped-padding" on hairline-ruled sections/rows and "overused-font: Geist" left as is. The sections have 48-112px padding (detector measures the hairline), and Geist + IBM Plex Sans Arabic are the pinned Ebda brand fonts. Cost if wrong: none visible; the brief pins the fonts.
